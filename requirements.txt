@@ -1,0 +1,3 @@
+## Note: These are Node.js packages, not Python packages.
+cypress
+cypress-terminal-report

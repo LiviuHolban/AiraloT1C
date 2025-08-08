@@ -1,0 +1,161 @@
+Debugger attached.
+Debugger attached.
+
+[7036:0808/160829.666:ERROR:node_bindings.cc(379)] Most NODE_OPTIONs are not supported in packaged apps. See documentation for more details.
+[7036:0808/160829.666:ERROR:node_bindings.cc(379)] Most NODE_OPTIONs are not supported in packaged apps. See documentation for more details.
+[7036:0808/160829.666:ERROR:node_bindings.cc(379)] Most NODE_OPTIONs are not supported in packaged apps. See documentation for more details.
+[7036:0808/160829.666:ERROR:node_bindings.cc(379)] Most NODE_OPTIONs are not supported in packaged apps. See documentation for more details.
+[7036:0808/160829.666:ERROR:node_bindings.cc(379)] Most NODE_OPTIONs are not supported in packaged apps. See documentation for more details.
+
+DevTools listening on ws://127.0.0.1:50862/devtools/browser/5073ce99-e3de-49ea-8ab3-94fe8d337031
+Debugger attached.
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.4                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v22.15.1 (C:\Program Files\nodejs\node.exe)                                    │
+  │ Specs:          4 found (auth.cy.js, eSIMs_6merhaba_order.cy.js, eSIMs_getList.cy.js, eSims_6m │
+  │                 erhaba_order_verify.cy.js)                                                     │
+  │ Searched:       cypress/e2e/**/*.cy.js                                                         │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  auth.cy.js                                                                      (1 of 4)
+
+
+  Airalo API Authentication
+cypress-terminal-report: Wrote txt logs to cypress\logs\run-log.txt. (4ms)
+cypress-terminal-report: Wrote json logs to cypress\logs\run-log.json. (11ms)
+    √ should retrieve access token (566ms)
+
+
+  1 passing (652ms)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     0 seconds                                                                        │
+  │ Spec Ran:     auth.cy.js                                                                       │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  eSIMs_6merhaba_order.cy.js                                                      (2 of 4)
+
+
+  Order 6 "merhaba-7days-1gb" eSIMs from Airalo API
+cypress-terminal-report: Wrote txt logs to cypress\logs\run-log.txt. (11ms)
+cypress-terminal-report: Wrote json logs to cypress\logs\run-log.json. (16ms)
+    √ POST an order for 6 eSIMs (1519ms)
+
+
+  1 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     eSIMs_6merhaba_order.cy.js                                                       │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  eSIMs_getList.cy.js                                                             (3 of 4)
+
+
+  List all SIMs from Airalo API
+cypress-terminal-report: Wrote txt logs to cypress\logs\run-log.txt. (15ms)
+cypress-terminal-report: Wrote json logs to cypress\logs\run-log.json. (21ms)
+    √ should fetch and list all SIMs (920ms)
+
+
+  1 passing (1s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     eSIMs_getList.cy.js                                                              │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  eSims_6merhaba_order_verify.cy.js                                               (4 of 4)
+
+
+  Verify the inserted order for 6 "merhaba-7days-1gb" eSIMs
+cypress-terminal-report: Wrote txt logs to cypress\logs\run-log.txt. (22ms)
+cypress-terminal-report: Wrote json logs to cypress\logs\run-log.json. (30ms)
+    √ should GET and verify the order by order_id (1943ms)
+
+
+  1 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     2 seconds                                                                        │
+  │ Spec Ran:     eSims_6merhaba_order_verify.cy.js                                                │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ √  auth.cy.js                               659ms        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ √  eSIMs_6merhaba_order.cy.js               00:01        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ √  eSIMs_getList.cy.js                      00:01        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ √  eSims_6merhaba_order_verify.cy.js        00:02        1        1        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    √  All specs passed!                        00:06        4        4        -        -        -  
+
+Waiting for the debugger to disconnect...
+Waiting for the debugger to disconnect...

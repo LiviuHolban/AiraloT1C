@@ -1,0 +1,27 @@
+{
+  "name": "airalot1c",
+  "version": "1.0.0",
+  "description": "Automate API Requests and Verify Responses",
+  "main": "index.js",
+
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:log": "npx cypress run > cypress/testruns/result.txt 2>&1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiviuHolban/AiraloT1C.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LiviuHolban/AiraloT1C/issues"
+  },
+  "homepage": "https://github.com/LiviuHolban/AiraloT1C#readme",
+  "devDependencies": {
+    "cypress": "^14.5.4",
+    "cypress-terminal-report": "^7.2.1"
+  }
+}

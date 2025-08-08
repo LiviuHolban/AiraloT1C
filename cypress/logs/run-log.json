@@ -1,0 +1,798 @@
+{
+  "cypress\\e2e\\airalo\\auth.cy.js": {
+    "Airalo API Authentication -> should retrieve access token": [
+      {
+        "type": "cy:request",
+        "message": "POST https://sandbox-partners-api.airalo.com/v2/token\nStatus: 200\nResponse body: {\n  \"data\": {\n    \"token_type\": \"Bearer\",\n    \"expires_in\": 86400,\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NTgiLCJqdGkiOiJjNDQxNGQ0ZTA0MmNhOTk1YWZiN2JhNDBjYjM2Y2RhNGExZDVlNmE1NjIzOGZlYTIwZDJmYmExODk4Njg4MTU0NjFmMTk4ODc4YjQzMGY0NCIsImlhdCI6MTc1NDY2NDA5NC43MDk3MDMsIm5iZiI6MTc1NDY2NDA5NC43MDk3MDUsImV4cCI6MTc1NDc1MDQ5NC43MDUxNSwic3ViIjoiIiwic2NvcGVzIjpbXX0.2P3QKwKT4wytgIP8dTNWVlSZ4lAQlT0VgNKIDdvVEMYYyH49k3SVs_2RbL9LOoKpMzS-4IR9pIoJQSWWlhX2v9I-A5eQb2wE2Fqu1EF7oJJR5FAr197BWNagTl-AsfL5WOVdVJn6euGFbgCshNTqZ4UbBWNhDCgbRFs69HIXYJHfKN0XNBKhlVINj4Dot5dKYic8pvuXyfvO2bJbyivGRSOegx-fdMHAQUX8Lbfhqfw22RqRlQu8ASFAUlwBgpBP302MPb5irmez0EGCgYmXN0gVWR6Hwrbs-Sc5SAjBAI1HYfl08R0MNWY-MTEDKYdbCjnIDjCcx3MfvbZQMVHlFDxTUoE7DdkyrGyHTLTMBwiRHoJu-qObPfUpejctXdOtJ3hDEjvfvygdsxkedurCNMEw4p0OX_PA18vFdzsbMDZdhwz6FQ5_pk436Wpqa07WJI2iG7Q1Q9ynmplZLfETjwJPwqa-Nt_TiEzTBXD9rFKxeY04gTZxtxOhF4goMWEP2glLcsxbeOWTEwZWUNQfM-opZ5FnxlfSS7t_RQgDQDVLn85MLKP7qAunVfZniRivhwJHG6aX3s1GTGdUj6zn6UDHbk5LOXLTvSImsGF0M4TnXQUZ8a94Pe7W9eVuKzdGCtFG2RlFvqdbeEAT8inedOT1dH7MnnnWzZMYzkgBOs4\"\n  },\n  \"meta\": {\n    \"message\": \"success\"\n  }\n}",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **200** to equal **200**\nActual: \t200\nExpected: \t200",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (token_type, expires_in, ...) }** to have property **access_token**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "Full response: {\n  \"body\": {\n    \"data\": {\n      \"token_type\": \"Bearer\",\n      \"expires_in\": 86400,\n      \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NTgiLCJqdGkiOiJjNDQxNGQ0ZTA0MmNhOTk1YWZiN2JhNDBjYjM2Y2RhNGExZDVlNmE1NjIzOGZlYTIwZDJmYmExODk4Njg4MTU0NjFmMTk4ODc4YjQzMGY0NCIsImlhdCI6MTc1NDY2NDA5NC43MDk3MDMsIm5iZiI6MTc1NDY2NDA5NC43MDk3MDUsImV4cCI6MTc1NDc1MDQ5NC43MDUxNSwic3ViIjoiIiwic2NvcGVzIjpbXX0.2P3QKwKT4wytgIP8dTNWVlSZ4lAQlT0VgNKIDdvVEMYYyH49k3SVs_2RbL9LOoKpMzS-4IR9pIoJQSWWlhX2v9I-A5eQb2wE2Fqu1EF7oJJR5FAr197BWNagTl-AsfL5WOVdVJn6euGFbgCshNTqZ4UbBWNhDCgbRFs69HIXYJHfKN0XNBKhlVINj4Dot5dKYic8pvuXyfvO2bJbyivGRSOegx-fdMHAQUX8Lbfhqfw22RqRlQu8ASFAUlwBgpBP302MPb5irmez0EGCgYmXN0gVWR6Hwrbs-Sc5SAjBAI1HYfl08R0MNWY-MTEDKYdbCjnIDjCcx3MfvbZQMVHlFDxTUoE7DdkyrGyHTLTMBwiRHoJu-qObPfUpejctXdOtJ3hDEjvfvygdsxkedurCNMEw4p0OX_PA18vFdzsbMDZdhwz6FQ5_pk436Wpqa07WJI2iG7Q1Q9ynmplZLfETjwJPwqa-Nt_TiEzTBXD9rFKxeY04gTZxtxOhF4goMWEP2glLcsxbeOWTEwZWUNQfM-opZ5FnxlfSS7t_RQgDQDVLn85MLKP7qAunVfZniRivhwJHG6aX3s1GTGdUj6zn6UDHbk5LOXLTvSImsGF0M4TnXQUZ8a94Pe7W9eVuKzdGCtFG2RlFvqdbeEAT8inedOT1dH7MnnnWzZMYzkgBOs4\"\n    },\n    \"meta\": {\n      \"message\": \"success\"\n    }\n  },\n  \"headers\": {\n    \"date\": \"Fri, 08 Aug 2025 14:41:34 GMT\",\n    \"content-type\": \"application/json\",\n    \"transfer-encoding\": \"chunked\",\n    \"connection\": \"keep-alive\",\n    \"cf-ray\": \"96bfc67d8dcee3f4-OTP\",\n    \"cache-control\": \"no-cache, private\",\n    \"content-encoding\": \"gzip\",\n    \"referrer-policy\": \"same-origin\",\n    \"strict-transport-security\": \"max-age=31536000; includeSubdomains; preload\",\n    \"x-content-type-options\": \"nosniff\",\n    \"x-frame-options\": \"SAMEORIGIN\",\n    \"x-ratelimit-limit\": \"5\",\n    \"x-ratelimit-remaining\": \"4\",\n    \"cf-cache-status\": \"DYNAMIC\",\n    \"vary\": \"accept-encoding\",\n    \"set-cookie\": [\n      \"__cf_bm=iS9aoRmq7sZycS4ubZoBH082AMQ4NIT9.EjR8HgD1cI-1754664094-1.0.1.1-dtmXdbCIPOPeBKxiadvHdQH926QwB1_dGEtPNcWYxYgGXsE44DoTcrucucOaxlMNoG74QIeJki6GKiBvdO4Qncx0pavXKoBVSOmTV9ICcJQ; path=/; expires=Fri, 08-Aug-25 15:11:34 GMT; domain=.airalo.com; HttpOnly; Secure; SameSite=None\",\n      \"_cfuvid=v6V5xvQqcm.Dl.aT_sXq1sqMdrGqZ.oB8R84iT4d56Q-1754664094751-0.0.1.1-604800000; path=/; domain=.airalo.com; HttpOnly; Secure; SameSite=None\"\n    ],\n    \"server\": \"cloudflare\"\n  },\n  \"status\": 200,\n  \"statusText\": \"OK\",\n  \"isOkStatusCode\": true,\n  \"requestHeaders\": {\n    \"Connection\": \"keep-alive\",\n    \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/14.5.4 Chrome/130.0.6723.137 Electron/33.2.1 Safari/537.36\",\n    \"accept\": \"*/*\",\n    \"content-type\": \"application/x-www-form-urlencoded\",\n    \"accept-encoding\": \"gzip, deflate\",\n    \"content-length\": 127\n  },\n  \"requestBody\": \"client_id=7e29e2facf83359855f746fc490443e6&client_secret=e5NNajm6jNAzrWsKoAdr41WfDiMeS1l6IcGdhmbb&grant_type=client_credentials\",\n  \"duration\": 555,\n  \"allRequestResponses\": [\n    {\n      \"Request Body\": \"client_id=7e29e2facf83359855f746fc490443e6&client_secret=e5NNajm6jNAzrWsKoAdr41WfDiMeS1l6IcGdhmbb&grant_type=client_credentials\",\n      \"Request Headers\": {\n        \"Connection\": \"keep-alive\",\n        \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/14.5.4 Chrome/130.0.6723.137 Electron/33.2.1 Safari/537.36\",\n        \"accept\": \"*/*\",\n        \"content-type\": \"application/x-www-form-urlencoded\",\n        \"accept-encoding\": \"gzip, deflate\",\n        \"content-length\": 127\n      },\n      \"Request URL\": \"https://sandbox-partners-api.airalo.com/v2/token\",\n      \"Response Body\": \"{\\\"data\\\":{\\\"token_type\\\":\\\"Bearer\\\",\\\"expires_in\\\":86400,\\\"access_token\\\":\\\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NTgiLCJqdGkiOiJjNDQxNGQ0ZTA0MmNhOTk1YWZiN2JhNDBjYjM2Y2RhNGExZDVlNmE1NjIzOGZlYTIwZDJmYmExODk4Njg4MTU0NjFmMTk4ODc4YjQzMGY0NCIsImlhdCI6MTc1NDY2NDA5NC43MDk3MDMsIm5iZiI6MTc1NDY2NDA5NC43MDk3MDUsImV4cCI6MTc1NDc1MDQ5NC43MDUxNSwic3ViIjoiIiwic2NvcGVzIjpbXX0.2P3QKwKT4wytgIP8dTNWVlSZ4lAQlT0VgNKIDdvVEMYYyH49k3SVs_2RbL9LOoKpMzS-4IR9pIoJQSWWlhX2v9I-A5eQb2wE2Fqu1EF7oJJR5FAr197BWNagTl-AsfL5WOVdVJn6euGFbgCshNTqZ4UbBWNhDCgbRFs69HIXYJHfKN0XNBKhlVINj4Dot5dKYic8pvuXyfvO2bJbyivGRSOegx-fdMHAQUX8Lbfhqfw22RqRlQu8ASFAUlwBgpBP302MPb5irmez0EGCgYmXN0gVWR6Hwrbs-Sc5SAjBAI1HYfl08R0MNWY-MTEDKYdbCjnIDjCcx3MfvbZQMVHlFDxTUoE7DdkyrGyHTLTMBwiRHoJu-qObPfUpejctXdOtJ3hDEjvfvygdsxkedurCNMEw4p0OX_PA18vFdzsbMDZdhwz6FQ5_pk436Wpqa07WJI2iG7Q1Q9ynmplZLfETjwJPwqa-Nt_TiEzTBXD9rFKxeY04gTZxtxOhF4goMWEP2glLcsxbeOWTEwZWUNQfM-opZ5FnxlfSS7t_RQgDQDVLn85MLKP7qAunVfZniRivhwJHG6aX3s1GTGdUj6zn6UDHbk5LOXLTvSImsGF0M4TnXQUZ8a94Pe7W9eVuKzdGCtFG2RlFvqdbeEAT8inedOT1dH7MnnnWzZMYzkgBOs4\\\"},\\\"meta\\\":{\\\"message\\\":\\\"success\\\"}}\",\n      \"Response Headers\": {\n        \"date\": \"Fri, 08 Aug 2025 14:41:34 GMT\",\n        \"content-type\": \"application/json\",\n        \"transfer-encoding\": \"chunked\",\n        \"connection\": \"keep-alive\",\n        \"cf-ray\": \"96bfc67d8dcee3f4-OTP\",\n        \"cache-control\": \"no-cache, private\",\n        \"content-encoding\": \"gzip\",\n        \"referrer-policy\": \"same-origin\",\n        \"strict-transport-security\": \"max-age=31536000; includeSubdomains; preload\",\n        \"x-content-type-options\": \"nosniff\",\n        \"x-frame-options\": \"SAMEORIGIN\",\n        \"x-ratelimit-limit\": \"5\",\n        \"x-ratelimit-remaining\": \"4\",\n        \"cf-cache-status\": \"DYNAMIC\",\n        \"vary\": \"accept-encoding\",\n        \"set-cookie\": [\n          \"__cf_bm=iS9aoRmq7sZycS4ubZoBH082AMQ4NIT9.EjR8HgD1cI-1754664094-1.0.1.1-dtmXdbCIPOPeBKxiadvHdQH926QwB1_dGEtPNcWYxYgGXsE44DoTcrucucOaxlMNoG74QIeJki6GKiBvdO4Qncx0pavXKoBVSOmTV9ICcJQ; path=/; expires=Fri, 08-Aug-25 15:11:34 GMT; domain=.airalo.com; HttpOnly; Secure; SameSite=None\",\n          \"_cfuvid=v6V5xvQqcm.Dl.aT_sXq1sqMdrGqZ.oB8R84iT4d56Q-1754664094751-0.0.1.1-604800000; path=/; domain=.airalo.com; HttpOnly; Secure; SameSite=None\"\n        ],\n        \"server\": \"cloudflare\"\n      },\n      \"Response Status\": 200\n    }\n  ]\n}",
+        "severity": "success"
+      }
+    ]
+  },
+  "cypress\\e2e\\airalo\\eSIMs_6merhaba_order.cy.js": {
+    "Order 6 \"merhaba-7days-1gb\" eSIMs from Airalo API -> POST an order for 6 eSIMs": [
+      {
+        "type": "cy:request",
+        "message": "POST https://sandbox-partners-api.airalo.com/v2/token\nStatus: 200\nResponse body: {\n  \"data\": {\n    \"token_type\": \"Bearer\",\n    \"expires_in\": 86400,\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NTgiLCJqdGkiOiIyMGU2NWI2OTQyNDFiNjBjM2E1ZGU0MzU3YjMwYjI4NmQ2MWMzOTU4MTEzNmY3MDIwNDhmNTQzYzk1YmI0ZTlmNjkzY2IzYzk0NWU0NTg4YiIsImlhdCI6MTc1NDY2NDA5OC4xOTU5NjgsIm5iZiI6MTc1NDY2NDA5OC4xOTU5NywiZXhwIjoxNzU0NzUwNDk4LjE5MTU4Mywic3ViIjoiIiwic2NvcGVzIjpbXX0.hSG_3wAuMfSZnVYTunt1hlVromuqSJh3ph06ILmnGNAlhV6Wg0zI6PBC6rud8JGsEPCXbiYn9i93nwhhAe3ue4dZrYNXnrH2qQusnwUuHLYLs-NdolzafHo2w2Uguf0rJhdKLEGRJWfoDtU9CLPDLV9Lb88jJvsEvZmSGS39-Z7G8yilTdhL2z1EIvriMF5A3bjvg4v7d2RkR_RyCBVuCyNCZyQDS17RE98uLgiFLjbIrJcQ5QnAECf13U9PIQKIEOJN39hJN8SwkhTzn6E1lMV8JqbSPW1ppKEC9bFTukIDx8nR8CuH50GaX1dO5S1u1Tyjsv1jKQOYOaL1C4LDcwnm74YrG2vfM5wiq4uGRimuwYSD4r2l8ikDIv8u6OBIYFR69pA7QEuxldIdlSayCGdo8401LZeFqLwFJ-1VL9Yluslw15KgDyupfOyYdxku0eceleXke9H_TBYUb9Ndwr6I4HepxDV3NuhdwrrP7osuB08ahHlxU1LjrpFrLbPf3wdYgs7qpL285FX5_ha-dk3JEodMkRasMXyNttlcon36eV-tKlwcv4dLTpc_gN48FrKqQHrRHGpVmhNWgdiPCY62T_EWNWL7up4HbuiP1sSiH_xBjO3Rx-eeJf2NursskIVj1Z5ybbyMaZqdO-oe62JxIQXGnUEZ1L4xYeOKpT0\"\n  },\n  \"meta\": {\n    \"message\": \"success\"\n  }\n}",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "writeFile\tcypress/fixtures/token_response.json",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "wrap\teyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NTgiLCJqdGkiOiIyMGU2NWI2OTQyNDFiNjBjM2E1ZGU0MzU3YjMwYjI4NmQ2MWMzOTU4MTEzNmY3MDIwNDhmNTQzYzk1YmI0ZTlmNjkzY2IzYzk0NWU0NTg4YiIsImlhdCI6MTc1NDY2NDA5OC4xOTU5NjgsIm5iZiI6MTc1NDY2NDA5OC4xOTU5NywiZXhwIjoxNzU0NzUwNDk4LjE5MTU4Mywic3ViIjoiIiwic2NvcGVzIjpbXX0.hSG_3wAuMfSZnVYTunt1hlVromuqSJh3ph06ILmnGNAlhV6Wg0zI6PBC6rud8JGsEPCXbiYn9i93nwhhAe3ue4dZrYNXnrH2qQusnwUuHLYLs-NdolzafHo2w2Uguf0rJhdKLEGRJWfoDtU9CLPDLV9Lb88jJvsEvZmSGS39-Z7G8yilTdhL2z1EIvriMF5A3bjvg4v7d2RkR_RyCBVuCyNCZyQDS17RE98uLgiFLjbIrJcQ5QnAECf13U9PIQKIEOJN39hJN8SwkhTzn6E1lMV8JqbSPW1ppKEC9bFTukIDx8nR8CuH50GaX1dO5S1u1Tyjsv1jKQOYOaL1C4LDcwnm74YrG2vfM5wiq4uGRimuwYSD4r2l8ikDIv8u6OBIYFR69pA7QEuxldIdlSayCGdo8401LZeFqLwFJ-1VL9Yluslw15KgDyupfOyYdxku0eceleXke9H_TBYUb9Ndwr6I4HepxDV3NuhdwrrP7osuB08ahHlxU1LjrpFrLbPf3wdYgs7qpL285FX5_ha-dk3JEodMkRasMXyNttlcon36eV-tKlwcv4dLTpc_gN48FrKqQHrRHGpVmhNWgdiPCY62T_EWNWL7up4HbuiP1sSiH_xBjO3Rx-eeJf2NursskIVj1Z5ybbyMaZqdO-oe62JxIQXGnUEZ1L4xYeOKpT0",
+        "severity": "success"
+      },
+      {
+        "type": "cy:request",
+        "message": "POST https://sandbox-partners-api.airalo.com/v2/orders\nStatus: 200\nResponse body: {\n  \"data\": {\n    \"id\": 198523,\n    \"code\": \"20250808-198523\",\n    \"currency\": \"USD\",\n    \"package_id\": \"merhaba-7days-1gb\",\n    \"quantity\": 6,\n    \"type\": \"sim\",\n    \"description\": null,\n    \"esim_type\": \"Prepaid\",\n    \"validity\": 7,\n    \"package\": \"Merhaba-1 GB - 7 Days\",\n    \"data\": \"1 GB\",\n    \"price\": 4.5,\n    \"created_at\": \"2025-08-08 14:41:38\",\n    \"manual_installation\": \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To manually activate the eSIM on your eSIM capable device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Manually enter the SM-DP+ Address and activation code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android) </li><li>Enable data roaming.</li></ol>\",\n    \"qrcode_installation\": \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To activate the eSIM by scanning the QR code on your eSIM capable device you need to print or display this QR code on another device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Scan QR code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android)</li><li>Enable data roaming.</li></ol>\",\n    \"installation_guides\": {\n      \"en\": \"https://www.airalo.com/help/getting-started-with-airalo\"\n    },\n    \"text\": null,\n    \"voice\": null,\n    \"net_price\": 3.6,\n    \"brand_settings_name\": null,\n    \"sims\": [\n      {\n        \"id\": 282787,\n        \"created_at\": \"2025-08-08 14:41:38\",\n        \"iccid\": \"873000000000017059\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323330&signature=791e0a9710b2c97108edb5cbf4b9536a01a4dd0e6c854608e74783788179135d\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282788,\n        \"created_at\": \"2025-08-08 14:41:38\",\n        \"iccid\": \"873000000000017060\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323331&signature=740f566652796de3ab750d7d554cf376fb719477f541fae8b84735142241d1c9\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282789,\n        \"created_at\": \"2025-08-08 14:41:38\",\n        \"iccid\": \"873000000000017061\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323332&signature=e80d0ef39bbfeff0c98c7e672d0a122e0c5f4d3bc3212473bfef4fae744658c9\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282790,\n        \"created_at\": \"2025-08-08 14:41:38\",\n        \"iccid\": \"873000000000017062\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323333&signature=69b20894eefec06651ab1efe76696a9bfca7a49f8c523eec71aed6cf1c6b7424\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282791,\n        \"created_at\": \"2025-08-08 14:41:38\",\n        \"iccid\": \"873000000000017063\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323334&signature=26a54c466b37bb1ece15ea4dababd4fc11e478451498e25dbac130edcdc75e2c\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282792,\n        \"created_at\": \"2025-08-08 14:41:38\",\n        \"iccid\": \"873000000000017064\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323335&signature=4f72aa9e6ffcceda344c55555374a42cd23976c1792aa5211d54e6e239a13f2b\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"message\": \"success\"\n  }\n}",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **[ 200, 201 ]** to be an array",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **200** to be one of **[ 200, 201 ]**\nActual: \t200\nExpected: \t[200,201]",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (data, meta) }** to have property **data**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **package_id**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **quantity**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **type**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **description**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **esim_type**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **validity**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **package**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **data**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **price**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **created_at**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **id**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **code**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **currency**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **manual_installation**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **qrcode_installation**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **installation_guides**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **brand_settings_name**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **sims**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (data, meta) }** to have property **meta**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ message: success }** to have property **message**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ message: success }** to have property **message** of **success**\nActual: \t\"success\"\nExpected: \t\"success\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "--- Order Response: FULL ---",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "id: 198523",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "code: \"20250808-198523\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "currency: \"USD\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "package_id: \"merhaba-7days-1gb\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "quantity: 6",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "type: \"sim\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "description: null",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "esim_type: \"Prepaid\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "validity: 7",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "package: \"Merhaba-1 GB - 7 Days\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "data: \"1 GB\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "price: 4.5",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "created_at: \"2025-08-08 14:41:38\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "manual_installation: \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To manually activate the eSIM on your eSIM capable device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Manually enter the SM-DP+ Address and activation code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android) </li><li>Enable data roaming.</li></ol>\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "qrcode_installation: \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To activate the eSIM by scanning the QR code on your eSIM capable device you need to print or display this QR code on another device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Scan QR code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android)</li><li>Enable data roaming.</li></ol>\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "installation_guides: {\"en\":\"https://www.airalo.com/help/getting-started-with-airalo\"}",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "text: null",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "voice: null",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "net_price: 3.6",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "brand_settings_name: null",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "sims: [{\"id\":282787,\"created_at\":\"2025-08-08 14:41:38\",\"iccid\":\"873000000000017059\",\"lpa\":\"lpa.airalo.com\",\"imsis\":null,\"matching_id\":\"TEST\",\"qrcode\":\"LPA:1$lpa.airalo.com$TEST\",\"qrcode_url\":\"https://sandbox.airalo.com/qr?expires=1840977698&id=323330&signature=791e0a9710b2c97108edb5cbf4b9536a01a4dd0e6c854608e74783788179135d\",\"airalo_code\":null,\"apn_type\":\"manual\",\"apn_value\":\"airalo2\",\"is_roaming\":true,\"confirmation_code\":null,\"apn\":{\"ios\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"},\"android\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"}},\"msisdn\":null,\"direct_apple_installation_url\":\"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"},{\"id\":282788,\"created_at\":\"2025-08-08 14:41:38\",\"iccid\":\"873000000000017060\",\"lpa\":\"lpa.airalo.com\",\"imsis\":null,\"matching_id\":\"TEST\",\"qrcode\":\"LPA:1$lpa.airalo.com$TEST\",\"qrcode_url\":\"https://sandbox.airalo.com/qr?expires=1840977698&id=323331&signature=740f566652796de3ab750d7d554cf376fb719477f541fae8b84735142241d1c9\",\"airalo_code\":null,\"apn_type\":\"manual\",\"apn_value\":\"airalo2\",\"is_roaming\":true,\"confirmation_code\":null,\"apn\":{\"ios\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"},\"android\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"}},\"msisdn\":null,\"direct_apple_installation_url\":\"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"},{\"id\":282789,\"created_at\":\"2025-08-08 14:41:38\",\"iccid\":\"873000000000017061\",\"lpa\":\"lpa.airalo.com\",\"imsis\":null,\"matching_id\":\"TEST\",\"qrcode\":\"LPA:1$lpa.airalo.com$TEST\",\"qrcode_url\":\"https://sandbox.airalo.com/qr?expires=1840977698&id=323332&signature=e80d0ef39bbfeff0c98c7e672d0a122e0c5f4d3bc3212473bfef4fae744658c9\",\"airalo_code\":null,\"apn_type\":\"manual\",\"apn_value\":\"airalo2\",\"is_roaming\":true,\"confirmation_code\":null,\"apn\":{\"ios\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"},\"android\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"}},\"msisdn\":null,\"direct_apple_installation_url\":\"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"},{\"id\":282790,\"created_at\":\"2025-08-08 14:41:38\",\"iccid\":\"873000000000017062\",\"lpa\":\"lpa.airalo.com\",\"imsis\":null,\"matching_id\":\"TEST\",\"qrcode\":\"LPA:1$lpa.airalo.com$TEST\",\"qrcode_url\":\"https://sandbox.airalo.com/qr?expires=1840977698&id=323333&signature=69b20894eefec06651ab1efe76696a9bfca7a49f8c523eec71aed6cf1c6b7424\",\"airalo_code\":null,\"apn_type\":\"manual\",\"apn_value\":\"airalo2\",\"is_roaming\":true,\"confirmation_code\":null,\"apn\":{\"ios\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"},\"android\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"}},\"msisdn\":null,\"direct_apple_installation_url\":\"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"},{\"id\":282791,\"created_at\":\"2025-08-08 14:41:38\",\"iccid\":\"873000000000017063\",\"lpa\":\"lpa.airalo.com\",\"imsis\":null,\"matching_id\":\"TEST\",\"qrcode\":\"LPA:1$lpa.airalo.com$TEST\",\"qrcode_url\":\"https://sandbox.airalo.com/qr?expires=1840977698&id=323334&signature=26a54c466b37bb1ece15ea4dababd4fc11e478451498e25dbac130edcdc75e2c\",\"airalo_code\":null,\"apn_type\":\"manual\",\"apn_value\":\"airalo2\",\"is_roaming\":true,\"confirmation_code\":null,\"apn\":{\"ios\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"},\"android\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"}},\"msisdn\":null,\"direct_apple_installation_url\":\"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"},{\"id\":282792,\"created_at\":\"2025-08-08 14:41:38\",\"iccid\":\"873000000000017064\",\"lpa\":\"lpa.airalo.com\",\"imsis\":null,\"matching_id\":\"TEST\",\"qrcode\":\"LPA:1$lpa.airalo.com$TEST\",\"qrcode_url\":\"https://sandbox.airalo.com/qr?expires=1840977698&id=323335&signature=4f72aa9e6ffcceda344c55555374a42cd23976c1792aa5211d54e6e239a13f2b\",\"airalo_code\":null,\"apn_type\":\"manual\",\"apn_value\":\"airalo2\",\"is_roaming\":true,\"confirmation_code\":null,\"apn\":{\"ios\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"},\"android\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"}},\"msisdn\":null,\"direct_apple_installation_url\":\"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"}]",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "--- Meta ---",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "message: \"success\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "--- Raw Response ---",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "{\n  \"data\": {\n    \"id\": 198523,\n    \"code\": \"20250808-198523\",\n    \"currency\": \"USD\",\n    \"package_id\": \"merhaba-7days-1gb\",\n    \"quantity\": 6,\n    \"type\": \"sim\",\n    \"description\": null,\n    \"esim_type\": \"Prepaid\",\n    \"validity\": 7,\n    \"package\": \"Merhaba-1 GB - 7 Days\",\n    \"data\": \"1 GB\",\n    \"price\": 4.5,\n    \"created_at\": \"2025-08-08 14:41:38\",\n    \"manual_installation\": \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To manually activate the eSIM on your eSIM capable device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Manually enter the SM-DP+ Address and activation code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android) </li><li>Enable data roaming.</li></ol>\",\n    \"qrcode_installation\": \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To activate the eSIM by scanning the QR code on your eSIM capable device you need to print or display this QR code on another device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Scan QR code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android)</li><li>Enable data roaming.</li></ol>\",\n    \"installation_guides\": {\n      \"en\": \"https://www.airalo.com/help/getting-started-with-airalo\"\n    },\n    \"text\": null,\n    \"voice\": null,\n    \"net_price\": 3.6,\n    \"brand_settings_name\": null,\n    \"sims\": [\n      {\n        \"id\": 282787,\n        \"created_at\": \"2025-08-08 14:41:38\",\n        \"iccid\": \"873000000000017059\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323330&signature=791e0a9710b2c97108edb5cbf4b9536a01a4dd0e6c854608e74783788179135d\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282788,\n        \"created_at\": \"2025-08-08 14:41:38\",\n        \"iccid\": \"873000000000017060\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323331&signature=740f566652796de3ab750d7d554cf376fb719477f541fae8b84735142241d1c9\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282789,\n        \"created_at\": \"2025-08-08 14:41:38\",\n        \"iccid\": \"873000000000017061\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323332&signature=e80d0ef39bbfeff0c98c7e672d0a122e0c5f4d3bc3212473bfef4fae744658c9\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282790,\n        \"created_at\": \"2025-08-08 14:41:38\",\n        \"iccid\": \"873000000000017062\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323333&signature=69b20894eefec06651ab1efe76696a9bfca7a49f8c523eec71aed6cf1c6b7424\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282791,\n        \"created_at\": \"2025-08-08 14:41:38\",\n        \"iccid\": \"873000000000017063\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323334&signature=26a54c466b37bb1ece15ea4dababd4fc11e478451498e25dbac130edcdc75e2c\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282792,\n        \"created_at\": \"2025-08-08 14:41:38\",\n        \"iccid\": \"873000000000017064\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323335&signature=4f72aa9e6ffcceda344c55555374a42cd23976c1792aa5211d54e6e239a13f2b\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"message\": \"success\"\n  }\n}",
+        "severity": "success"
+      }
+    ]
+  },
+  "cypress\\e2e\\airalo\\eSIMs_getList.cy.js": {
+    "List all SIMs from Airalo API -> should fetch and list all SIMs": [
+      {
+        "type": "cy:request",
+        "message": "POST https://sandbox-partners-api.airalo.com/v2/token\nStatus: 200\nResponse body: {\n  \"data\": {\n    \"token_type\": \"Bearer\",\n    \"expires_in\": 86400,\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NTgiLCJqdGkiOiJmNDU2MDFkZjhkYjYwNmUwMTBmYmVkNDUyN2Q1NTdhZThmNjMzMzA2ODJlMzg2YzY2MjJlYjcyZjdhNzM5YTQ4NDVmNzkxOWY0ZTNiYTYwZSIsImlhdCI6MTc1NDY2NDEwMi4wOTk1OTUsIm5iZiI6MTc1NDY2NDEwMi4wOTk1OTcsImV4cCI6MTc1NDc1MDUwMi4wOTUyMjgsInN1YiI6IiIsInNjb3BlcyI6W119.Q0-XZF2KoQW7KlVc1oXmyvOU8ZwkiCZV9v7Z-QbtoylcteOMj4-hUA3tu1V3fApdlplW8CFFRqP6dS9bcsR_IkB5UAYwWB8IUsSumv6WJWr6WzDuCVY-DVDz7hy8NXtkUGN26wisEj6nCRNZ9geZFmUyc6e_ivXOr_ihPI-p_E0FmqSQdVupaLTLjiyzf1X2yYm1xHm_zS-sZAl6qMDNOC5I1SvPDmATWcj5VYuLLeSOQODSRmLxUTtIxsCwtCtkhBozSGG4zyDKtsqU8z2L4yhoaSgMCUVAvJeIwF4nLRfY78jA8vARGmCnLJNFYN0Z9zNrP_hsnyxohq3pJuJfW2zjzVXOrHhk5vusP41oYjxgljVHiUQkGpiK_VTUgiRapK6yach-5pY-b_cyhgS80ulnf5qG2rcK2A70JcRg7p4sbFuWc14hYudyBgsd2HiA9dUOkVT6iIoV4h1g3zgOXUErzPZzTJwO1obyZ3MrGuAi2ZJEoWZIaqlxjh5k-vWjRBSsRHGkqSfmuJ-UjQ9omU04GuunHhX7nyYqgPtQkmXFEeZoEMYd3k9xx2QoKNB7ekVjREFTI2Wgy9hgeRLr8vyxEoXE38XvUfpmLbhjORcv97eHqzC031diZVwafU28LXJZM3laBaK0B3Njewy6eDq4N1H3HiZ6alEh_Ga7Pu0\"\n  },\n  \"meta\": {\n    \"message\": \"success\"\n  }\n}",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "writeFile\tcypress/fixtures/token_response.json",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "wrap\teyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NTgiLCJqdGkiOiJmNDU2MDFkZjhkYjYwNmUwMTBmYmVkNDUyN2Q1NTdhZThmNjMzMzA2ODJlMzg2YzY2MjJlYjcyZjdhNzM5YTQ4NDVmNzkxOWY0ZTNiYTYwZSIsImlhdCI6MTc1NDY2NDEwMi4wOTk1OTUsIm5iZiI6MTc1NDY2NDEwMi4wOTk1OTcsImV4cCI6MTc1NDc1MDUwMi4wOTUyMjgsInN1YiI6IiIsInNjb3BlcyI6W119.Q0-XZF2KoQW7KlVc1oXmyvOU8ZwkiCZV9v7Z-QbtoylcteOMj4-hUA3tu1V3fApdlplW8CFFRqP6dS9bcsR_IkB5UAYwWB8IUsSumv6WJWr6WzDuCVY-DVDz7hy8NXtkUGN26wisEj6nCRNZ9geZFmUyc6e_ivXOr_ihPI-p_E0FmqSQdVupaLTLjiyzf1X2yYm1xHm_zS-sZAl6qMDNOC5I1SvPDmATWcj5VYuLLeSOQODSRmLxUTtIxsCwtCtkhBozSGG4zyDKtsqU8z2L4yhoaSgMCUVAvJeIwF4nLRfY78jA8vARGmCnLJNFYN0Z9zNrP_hsnyxohq3pJuJfW2zjzVXOrHhk5vusP41oYjxgljVHiUQkGpiK_VTUgiRapK6yach-5pY-b_cyhgS80ulnf5qG2rcK2A70JcRg7p4sbFuWc14hYudyBgsd2HiA9dUOkVT6iIoV4h1g3zgOXUErzPZzTJwO1obyZ3MrGuAi2ZJEoWZIaqlxjh5k-vWjRBSsRHGkqSfmuJ-UjQ9omU04GuunHhX7nyYqgPtQkmXFEeZoEMYd3k9xx2QoKNB7ekVjREFTI2Wgy9hgeRLr8vyxEoXE38XvUfpmLbhjORcv97eHqzC031diZVwafU28LXJZM3laBaK0B3Njewy6eDq4N1H3HiZ6alEh_Ga7Pu0",
+        "severity": "success"
+      },
+      {
+        "type": "cy:request",
+        "message": "GET https://sandbox-partners-api.airalo.com/v2/sims\nStatus: 200\nResponse body: {\n  \"data\": [\n    {\n      \"id\": 282792,\n      \"created_at\": \"2025-08-08 14:41:38\",\n      \"iccid\": \"873000000000017064\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323335&signature=4f72aa9e6ffcceda344c55555374a42cd23976c1792aa5211d54e6e239a13f2b\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282791,\n      \"created_at\": \"2025-08-08 14:41:38\",\n      \"iccid\": \"873000000000017063\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323334&signature=26a54c466b37bb1ece15ea4dababd4fc11e478451498e25dbac130edcdc75e2c\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282790,\n      \"created_at\": \"2025-08-08 14:41:38\",\n      \"iccid\": \"873000000000017062\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323333&signature=69b20894eefec06651ab1efe76696a9bfca7a49f8c523eec71aed6cf1c6b7424\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282789,\n      \"created_at\": \"2025-08-08 14:41:38\",\n      \"iccid\": \"873000000000017061\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323332&signature=e80d0ef39bbfeff0c98c7e672d0a122e0c5f4d3bc3212473bfef4fae744658c9\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282788,\n      \"created_at\": \"2025-08-08 14:41:38\",\n      \"iccid\": \"873000000000017060\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323331&signature=740f566652796de3ab750d7d554cf376fb719477f541fae8b84735142241d1c9\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282787,\n      \"created_at\": \"2025-08-08 14:41:38\",\n      \"iccid\": \"873000000000017059\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323330&signature=791e0a9710b2c97108edb5cbf4b9536a01a4dd0e6c854608e74783788179135d\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282778,\n      \"created_at\": \"2025-08-08 14:09:35\",\n      \"iccid\": \"873000000000017045\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975775&id=323316&signature=2f3e58c6c30182a17dbe1f6daf4dcac8662b21727d636f2dbb1adfd99c96510a\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282777,\n      \"created_at\": \"2025-08-08 14:09:35\",\n      \"iccid\": \"873000000000017044\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975775&id=323315&signature=f9b8857920c2b89e235e6ed22b55519ed07be92f90362198d55491fb3a9e57c0\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282776,\n      \"created_at\": \"2025-08-08 14:09:35\",\n      \"iccid\": \"873000000000017043\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975775&id=323314&signature=7dd926df813432fa87554bdbe2171e8ee0490b04456399348409b805e4704905\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282775,\n      \"created_at\": \"2025-08-08 14:09:35\",\n      \"iccid\": \"873000000000017042\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975775&id=323313&signature=b36f22a2e1933235be8ea1223fac378f12327d9b2084d783a3aef4f7798d5564\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282774,\n      \"created_at\": \"2025-08-08 14:09:35\",\n      \"iccid\": \"873000000000017041\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975775&id=323312&signature=7903adc41e9b831dd429716c1f1b74e67ab6d1e86f5ec63ed2023326ab3b9963\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282773,\n      \"created_at\": \"2025-08-08 14:09:35\",\n      \"iccid\": \"873000000000017040\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975775&id=323311&signature=88ca70752ca5c869bf9b25453f392b7852b3e0f78f751c62aa18dd08e5ff52f0\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282772,\n      \"created_at\": \"2025-08-08 14:06:48\",\n      \"iccid\": \"873000000000017039\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975608&id=323310&signature=04be32d70c43f8ebb9365c4099a21f3e7f33f1be8ab36b3a2f9d3ec032266651\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282771,\n      \"created_at\": \"2025-08-08 14:06:48\",\n      \"iccid\": \"873000000000017038\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975608&id=323309&signature=b1a23717efc96b76010f0a1a08f7cbb69c9a5f567afb5b4a39281185ce7f6056\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282770,\n      \"created_at\": \"2025-08-08 14:06:48\",\n      \"iccid\": \"873000000000017037\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975608&id=323308&signature=610a95d1d854308d10eb197a3d47e7bfa65c4568647d1b0474ca04bbc830db5e\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282769,\n      \"created_at\": \"2025-08-08 14:06:48\",\n      \"iccid\": \"873000000000017036\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975608&id=323307&signature=4e826f4aa7772a4baeca4cc404f268a86c19734da99575c928feee9926893e95\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282768,\n      \"created_at\": \"2025-08-08 14:06:48\",\n      \"iccid\": \"873000000000017035\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975608&id=323306&signature=624973cdbb5ecbcb4b62b7de2b18031323e5311c422b7508a746545bdbd1c052\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282767,\n      \"created_at\": \"2025-08-08 14:06:48\",\n      \"iccid\": \"873000000000017034\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975608&id=323305&signature=fdb5685b56bc5188a09e49654a3d1548110ba206ac15c5ac76c151023e1a9ce4\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282766,\n      \"created_at\": \"2025-08-08 14:05:09\",\n      \"iccid\": \"873000000000017033\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975509&id=323304&signature=2e51ae442c826f00a18bbb7cfcff7f0301ade317d1b5bcaa19e9607470c9aabf\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282765,\n      \"created_at\": \"2025-08-08 14:05:09\",\n      \"iccid\": \"873000000000017032\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975509&id=323303&signature=bccfe8d6cbb62cdab0c4cef0b0401b8070b0b3b97009ed054417b36d18619501\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282764,\n      \"created_at\": \"2025-08-08 14:05:09\",\n      \"iccid\": \"873000000000017031\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975509&id=323302&signature=91881586c09a7905908ba95462473decee44a69eeca13beca39c034a0c062809\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282763,\n      \"created_at\": \"2025-08-08 14:05:09\",\n      \"iccid\": \"873000000000017030\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975509&id=323301&signature=67757e8237150b62bebebc86295d4f7cec7e9147b09fd382e50e30360e9778a3\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282762,\n      \"created_at\": \"2025-08-08 14:05:09\",\n      \"iccid\": \"873000000000017029\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975509&id=323300&signature=e41eff180a8eb4b5be27448c2cfc47d2eb0fe6c9535006ddb9e6079e5beec7ec\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282761,\n      \"created_at\": \"2025-08-08 14:05:09\",\n      \"iccid\": \"873000000000017028\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975509&id=323299&signature=0480b93ce0de426793b888045a0a2dd18c330d62be46da2a0bac79ce0ab01ad4\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    },\n    {\n      \"id\": 282755,\n      \"created_at\": \"2025-08-08 13:58:37\",\n      \"iccid\": \"873000000000017021\",\n      \"lpa\": \"lpa.airalo.com\",\n      \"imsis\": null,\n      \"matching_id\": \"TEST\",\n      \"confirmation_code\": null,\n      \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n      \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975117&id=323292&signature=cb3f80c4027435baa5d70cf18bbba5160857d0ed9baca07b1617488b6987faca\",\n      \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n      \"voucher_code\": null,\n      \"airalo_code\": null,\n      \"apn_type\": \"manual\",\n      \"apn_value\": \"airalo2\",\n      \"is_roaming\": true,\n      \"brand_settings_name\": null,\n      \"msisdn\": null,\n      \"apn\": {\n        \"ios\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        },\n        \"android\": {\n          \"apn_type\": \"manual\",\n          \"apn_value\": \"airalo2\"\n        }\n      },\n      \"recycled\": false,\n      \"recycled_at\": null\n    }\n  ],\n  \"links\": {\n    \"first\": \"https://sandbox-partners-api.airalo.com/v2/sims?page=1\",\n    \"last\": \"https://sandbox-partners-api.airalo.com/v2/sims?page=822\",\n    \"prev\": null,\n    \"next\": \"https://sandbox-partners-api.airalo.com/v2/sims?page=2\"\n  },\n  \"meta\": {\n    \"message\": \"success\",\n    \"current_page\": 1,\n    \"from\": 1,\n    \"last_page\": 822,\n    \"path\": \"https://sandbox-partners-api.airalo.com/v2/sims\",\n    \"per_page\": \"25\",\n    \"to\": 25,\n    \"total\": 20540\n  }\n}",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **200** to equal **200**\nActual: \t200\nExpected: \t200",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (data, links, ...) }** to have property **data**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "SIMs: [\n  {\n    \"id\": 282792,\n    \"created_at\": \"2025-08-08 14:41:38\",\n    \"iccid\": \"873000000000017064\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323335&signature=4f72aa9e6ffcceda344c55555374a42cd23976c1792aa5211d54e6e239a13f2b\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282791,\n    \"created_at\": \"2025-08-08 14:41:38\",\n    \"iccid\": \"873000000000017063\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323334&signature=26a54c466b37bb1ece15ea4dababd4fc11e478451498e25dbac130edcdc75e2c\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282790,\n    \"created_at\": \"2025-08-08 14:41:38\",\n    \"iccid\": \"873000000000017062\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323333&signature=69b20894eefec06651ab1efe76696a9bfca7a49f8c523eec71aed6cf1c6b7424\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282789,\n    \"created_at\": \"2025-08-08 14:41:38\",\n    \"iccid\": \"873000000000017061\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323332&signature=e80d0ef39bbfeff0c98c7e672d0a122e0c5f4d3bc3212473bfef4fae744658c9\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282788,\n    \"created_at\": \"2025-08-08 14:41:38\",\n    \"iccid\": \"873000000000017060\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323331&signature=740f566652796de3ab750d7d554cf376fb719477f541fae8b84735142241d1c9\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282787,\n    \"created_at\": \"2025-08-08 14:41:38\",\n    \"iccid\": \"873000000000017059\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977698&id=323330&signature=791e0a9710b2c97108edb5cbf4b9536a01a4dd0e6c854608e74783788179135d\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282778,\n    \"created_at\": \"2025-08-08 14:09:35\",\n    \"iccid\": \"873000000000017045\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975775&id=323316&signature=2f3e58c6c30182a17dbe1f6daf4dcac8662b21727d636f2dbb1adfd99c96510a\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282777,\n    \"created_at\": \"2025-08-08 14:09:35\",\n    \"iccid\": \"873000000000017044\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975775&id=323315&signature=f9b8857920c2b89e235e6ed22b55519ed07be92f90362198d55491fb3a9e57c0\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282776,\n    \"created_at\": \"2025-08-08 14:09:35\",\n    \"iccid\": \"873000000000017043\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975775&id=323314&signature=7dd926df813432fa87554bdbe2171e8ee0490b04456399348409b805e4704905\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282775,\n    \"created_at\": \"2025-08-08 14:09:35\",\n    \"iccid\": \"873000000000017042\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975775&id=323313&signature=b36f22a2e1933235be8ea1223fac378f12327d9b2084d783a3aef4f7798d5564\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282774,\n    \"created_at\": \"2025-08-08 14:09:35\",\n    \"iccid\": \"873000000000017041\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975775&id=323312&signature=7903adc41e9b831dd429716c1f1b74e67ab6d1e86f5ec63ed2023326ab3b9963\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282773,\n    \"created_at\": \"2025-08-08 14:09:35\",\n    \"iccid\": \"873000000000017040\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975775&id=323311&signature=88ca70752ca5c869bf9b25453f392b7852b3e0f78f751c62aa18dd08e5ff52f0\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282772,\n    \"created_at\": \"2025-08-08 14:06:48\",\n    \"iccid\": \"873000000000017039\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975608&id=323310&signature=04be32d70c43f8ebb9365c4099a21f3e7f33f1be8ab36b3a2f9d3ec032266651\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282771,\n    \"created_at\": \"2025-08-08 14:06:48\",\n    \"iccid\": \"873000000000017038\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975608&id=323309&signature=b1a23717efc96b76010f0a1a08f7cbb69c9a5f567afb5b4a39281185ce7f6056\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282770,\n    \"created_at\": \"2025-08-08 14:06:48\",\n    \"iccid\": \"873000000000017037\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975608&id=323308&signature=610a95d1d854308d10eb197a3d47e7bfa65c4568647d1b0474ca04bbc830db5e\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282769,\n    \"created_at\": \"2025-08-08 14:06:48\",\n    \"iccid\": \"873000000000017036\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975608&id=323307&signature=4e826f4aa7772a4baeca4cc404f268a86c19734da99575c928feee9926893e95\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282768,\n    \"created_at\": \"2025-08-08 14:06:48\",\n    \"iccid\": \"873000000000017035\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975608&id=323306&signature=624973cdbb5ecbcb4b62b7de2b18031323e5311c422b7508a746545bdbd1c052\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282767,\n    \"created_at\": \"2025-08-08 14:06:48\",\n    \"iccid\": \"873000000000017034\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975608&id=323305&signature=fdb5685b56bc5188a09e49654a3d1548110ba206ac15c5ac76c151023e1a9ce4\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282766,\n    \"created_at\": \"2025-08-08 14:05:09\",\n    \"iccid\": \"873000000000017033\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975509&id=323304&signature=2e51ae442c826f00a18bbb7cfcff7f0301ade317d1b5bcaa19e9607470c9aabf\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282765,\n    \"created_at\": \"2025-08-08 14:05:09\",\n    \"iccid\": \"873000000000017032\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975509&id=323303&signature=bccfe8d6cbb62cdab0c4cef0b0401b8070b0b3b97009ed054417b36d18619501\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282764,\n    \"created_at\": \"2025-08-08 14:05:09\",\n    \"iccid\": \"873000000000017031\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975509&id=323302&signature=91881586c09a7905908ba95462473decee44a69eeca13beca39c034a0c062809\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282763,\n    \"created_at\": \"2025-08-08 14:05:09\",\n    \"iccid\": \"873000000000017030\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975509&id=323301&signature=67757e8237150b62bebebc86295d4f7cec7e9147b09fd382e50e30360e9778a3\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282762,\n    \"created_at\": \"2025-08-08 14:05:09\",\n    \"iccid\": \"873000000000017029\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975509&id=323300&signature=e41eff180a8eb4b5be27448c2cfc47d2eb0fe6c9535006ddb9e6079e5beec7ec\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282761,\n    \"created_at\": \"2025-08-08 14:05:09\",\n    \"iccid\": \"873000000000017028\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975509&id=323299&signature=0480b93ce0de426793b888045a0a2dd18c330d62be46da2a0bac79ce0ab01ad4\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  },\n  {\n    \"id\": 282755,\n    \"created_at\": \"2025-08-08 13:58:37\",\n    \"iccid\": \"873000000000017021\",\n    \"lpa\": \"lpa.airalo.com\",\n    \"imsis\": null,\n    \"matching_id\": \"TEST\",\n    \"confirmation_code\": null,\n    \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n    \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840975117&id=323292&signature=cb3f80c4027435baa5d70cf18bbba5160857d0ed9baca07b1617488b6987faca\",\n    \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n    \"voucher_code\": null,\n    \"airalo_code\": null,\n    \"apn_type\": \"manual\",\n    \"apn_value\": \"airalo2\",\n    \"is_roaming\": true,\n    \"brand_settings_name\": null,\n    \"msisdn\": null,\n    \"apn\": {\n      \"ios\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      },\n      \"android\": {\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\"\n      }\n    },\n    \"recycled\": false,\n    \"recycled_at\": null\n  }\n]",
+        "severity": "success"
+      }
+    ]
+  },
+  "cypress\\e2e\\airalo\\eSims_6merhaba_verifyOrder.cy.js": {
+    "Verify the inserted order for 6 \"merhaba-7days-1gb\" eSIMs -> should GET and verify the order by order_id": [
+      {
+        "type": "cy:request",
+        "message": "POST https://sandbox-partners-api.airalo.com/v2/token\nStatus: 200\nResponse body: {\n  \"data\": {\n    \"token_type\": \"Bearer\",\n    \"expires_in\": 86400,\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NTgiLCJqdGkiOiIwNDYzMmZjZjljYjE4ZTgxZGUwYmE4ZGQ2ZmJiYzI1ZjJmNDUyZjM5NjljOWYwNTBiN2RiNDYwM2E5N2RlZGMxMTM4NjM3Yzg2NGRhZDg1MiIsImlhdCI6MTc1NDY2NDEwNi4xMzIyMDcsIm5iZiI6MTc1NDY2NDEwNi4xMzIyMDksImV4cCI6MTc1NDc1MDUwNi4xMjg0MzcsInN1YiI6IiIsInNjb3BlcyI6W119.53UsiNksDWhaYy4JehkfMY3L8bEmU-AePnoz4Q_GApdUVFkelMSzJH8RBD51ZumCXGN0LdbJ4XFqyb8wU-qAh-Zj5PXBfMdAqm9ogD7694kH6TGy24ZgYzI0AIQcuo1xSTaIhzu7HL0KqiCO2SxbZRdfhJprSbCRqP2Oan5ip--IQEIs350hQllDSiMZknHPlVYQgE4q-2HLosRIeg3Umi07me85lfT44VDDqnx81J1C83XG0yev4I1M8_nHhOrQiawJKto_-qXJ-AzpITvn-QpX3GrhaMrD3nRd89Vg9qqPzx_W2upzihFoDibeaFbrJ_k_Rsgc5c3ddN56Xxp1XfidvBHWgPnXayDlbDv5I-wBJDbVBtdL3Gi8SxjndL0On7aER16yBIITgJEPvI9UgawAQUl4F0CG6K4c8h8_PBfwgc84vmhqERvxP2vu5Ke0n-HIaNot0AMlh23vj7TDcYMx8DbJ5fLdsY8MLJkwPbrWie82SgocNU7zxPL2-9QdvYfw5JZ9znM4p2IvG7wquzUHSCFQjfPJemoWK0s3KnFZQNeYFgA3UwXjWMynpFvDjKi07qSbCqQQUwPihXQHYmUzWzl7LaJ9IQqFplytqB8unrjHZoH6oQSCO2E-kRn6P9wPXXzcHr-ELKDxNNESJ5R7AgotPkVUKr9xNwkDIf8\"\n  },\n  \"meta\": {\n    \"message\": \"success\"\n  }\n}",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "writeFile\tcypress/fixtures/token_response.json",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "wrap\teyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NTgiLCJqdGkiOiIwNDYzMmZjZjljYjE4ZTgxZGUwYmE4ZGQ2ZmJiYzI1ZjJmNDUyZjM5NjljOWYwNTBiN2RiNDYwM2E5N2RlZGMxMTM4NjM3Yzg2NGRhZDg1MiIsImlhdCI6MTc1NDY2NDEwNi4xMzIyMDcsIm5iZiI6MTc1NDY2NDEwNi4xMzIyMDksImV4cCI6MTc1NDc1MDUwNi4xMjg0MzcsInN1YiI6IiIsInNjb3BlcyI6W119.53UsiNksDWhaYy4JehkfMY3L8bEmU-AePnoz4Q_GApdUVFkelMSzJH8RBD51ZumCXGN0LdbJ4XFqyb8wU-qAh-Zj5PXBfMdAqm9ogD7694kH6TGy24ZgYzI0AIQcuo1xSTaIhzu7HL0KqiCO2SxbZRdfhJprSbCRqP2Oan5ip--IQEIs350hQllDSiMZknHPlVYQgE4q-2HLosRIeg3Umi07me85lfT44VDDqnx81J1C83XG0yev4I1M8_nHhOrQiawJKto_-qXJ-AzpITvn-QpX3GrhaMrD3nRd89Vg9qqPzx_W2upzihFoDibeaFbrJ_k_Rsgc5c3ddN56Xxp1XfidvBHWgPnXayDlbDv5I-wBJDbVBtdL3Gi8SxjndL0On7aER16yBIITgJEPvI9UgawAQUl4F0CG6K4c8h8_PBfwgc84vmhqERvxP2vu5Ke0n-HIaNot0AMlh23vj7TDcYMx8DbJ5fLdsY8MLJkwPbrWie82SgocNU7zxPL2-9QdvYfw5JZ9znM4p2IvG7wquzUHSCFQjfPJemoWK0s3KnFZQNeYFgA3UwXjWMynpFvDjKi07qSbCqQQUwPihXQHYmUzWzl7LaJ9IQqFplytqB8unrjHZoH6oQSCO2E-kRn6P9wPXXzcHr-ELKDxNNESJ5R7AgotPkVUKr9xNwkDIf8",
+        "severity": "success"
+      },
+      {
+        "type": "cy:request",
+        "message": "POST https://sandbox-partners-api.airalo.com/v2/orders\nStatus: 200\nResponse body: {\n  \"data\": {\n    \"id\": 198524,\n    \"code\": \"20250808-198524\",\n    \"currency\": \"USD\",\n    \"package_id\": \"merhaba-7days-1gb\",\n    \"quantity\": 6,\n    \"type\": \"sim\",\n    \"description\": null,\n    \"esim_type\": \"Prepaid\",\n    \"validity\": 7,\n    \"package\": \"Merhaba-1 GB - 7 Days\",\n    \"data\": \"1 GB\",\n    \"price\": 4.5,\n    \"created_at\": \"2025-08-08 14:41:46\",\n    \"manual_installation\": \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To manually activate the eSIM on your eSIM capable device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Manually enter the SM-DP+ Address and activation code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android) </li><li>Enable data roaming.</li></ol>\",\n    \"qrcode_installation\": \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To activate the eSIM by scanning the QR code on your eSIM capable device you need to print or display this QR code on another device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Scan QR code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android)</li><li>Enable data roaming.</li></ol>\",\n    \"installation_guides\": {\n      \"en\": \"https://www.airalo.com/help/getting-started-with-airalo\"\n    },\n    \"text\": null,\n    \"voice\": null,\n    \"net_price\": 3.6,\n    \"brand_settings_name\": null,\n    \"sims\": [\n      {\n        \"id\": 282793,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017065\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323336&signature=802d82fb01a5661bb9cebedc1e385e20c3c5333c6c8f39e735a9f1077c86f826\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282794,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017066\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323337&signature=2071df07fcf2de7e6f48802a046a42979d5191bc7304536753c0f7c0f5498d69\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282795,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017067\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323338&signature=05af46dc6718a6edc363482285c4c788dbcfd670f39beb50f801887e7ffe8bfa\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282796,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017068\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323339&signature=34764c178dfbf9085d0e943d427ce82fbc2ce85169581ef11514331e8172e962\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282797,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017069\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323340&signature=d199f451619390c88b68446e8ac3193f20ccfbbc0a29e771e78edff8c2153c1a\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282798,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017070\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323341&signature=cb838df6d492d9e4f45a6aff06402f2b0b835e75a77cafc82fea02dacbf5bff1\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"message\": \"success\"\n  }\n}",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **[ 200, 201 ]** to be an array",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **200** to be one of **[ 200, 201 ]**\nActual: \t200\nExpected: \t[200,201]",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (data, meta) }** to have property **data**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **merhaba-7days-1gb** to equal **merhaba-7days-1gb**\nActual: \t\"merhaba-7days-1gb\"\nExpected: \t\"merhaba-7days-1gb\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **6** to equal **6**\nActual: \t6\nExpected: \t6",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **sim** to be a string",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **[ Array(6) ]** to be an array",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **[ Array(6) ]** to have property **length**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **[ Array(6) ]** to have a length above **0**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (en) }** to have property **en**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (data, meta) }** to have property **meta**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ message: success }** to have property **message**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ message: success }** to have property **message** of **success**\nActual: \t\"success\"\nExpected: \t\"success\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **package_id**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **quantity**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **type**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **description**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **esim_type**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **validity**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **package**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **data**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **price**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **created_at**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **id**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **code**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **currency**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **manual_installation**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **qrcode_installation**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **installation_guides**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **brand_settings_name**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **sims**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (data, meta) }** to have property **meta**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ message: success }** to have property **message**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ message: success }** to have property **message** of **success**\nActual: \t\"success\"\nExpected: \t\"success\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "--- Order Response: FULL ---",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "id: 198524",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "code: \"20250808-198524\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "currency: \"USD\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "package_id: \"merhaba-7days-1gb\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "quantity: 6",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "type: \"sim\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "description: null",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "esim_type: \"Prepaid\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "validity: 7",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "package: \"Merhaba-1 GB - 7 Days\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "data: \"1 GB\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "price: 4.5",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "created_at: \"2025-08-08 14:41:46\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "manual_installation: \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To manually activate the eSIM on your eSIM capable device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Manually enter the SM-DP+ Address and activation code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android) </li><li>Enable data roaming.</li></ol>\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "qrcode_installation: \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To activate the eSIM by scanning the QR code on your eSIM capable device you need to print or display this QR code on another device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Scan QR code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android)</li><li>Enable data roaming.</li></ol>\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "installation_guides: {\"en\":\"https://www.airalo.com/help/getting-started-with-airalo\"}",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "text: null",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "voice: null",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "net_price: 3.6",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "brand_settings_name: null",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "sims: [{\"id\":282793,\"created_at\":\"2025-08-08 14:41:46\",\"iccid\":\"873000000000017065\",\"lpa\":\"lpa.airalo.com\",\"imsis\":null,\"matching_id\":\"TEST\",\"qrcode\":\"LPA:1$lpa.airalo.com$TEST\",\"qrcode_url\":\"https://sandbox.airalo.com/qr?expires=1840977706&id=323336&signature=802d82fb01a5661bb9cebedc1e385e20c3c5333c6c8f39e735a9f1077c86f826\",\"airalo_code\":null,\"apn_type\":\"manual\",\"apn_value\":\"airalo2\",\"is_roaming\":true,\"confirmation_code\":null,\"apn\":{\"ios\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"},\"android\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"}},\"msisdn\":null,\"direct_apple_installation_url\":\"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"},{\"id\":282794,\"created_at\":\"2025-08-08 14:41:46\",\"iccid\":\"873000000000017066\",\"lpa\":\"lpa.airalo.com\",\"imsis\":null,\"matching_id\":\"TEST\",\"qrcode\":\"LPA:1$lpa.airalo.com$TEST\",\"qrcode_url\":\"https://sandbox.airalo.com/qr?expires=1840977706&id=323337&signature=2071df07fcf2de7e6f48802a046a42979d5191bc7304536753c0f7c0f5498d69\",\"airalo_code\":null,\"apn_type\":\"manual\",\"apn_value\":\"airalo2\",\"is_roaming\":true,\"confirmation_code\":null,\"apn\":{\"ios\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"},\"android\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"}},\"msisdn\":null,\"direct_apple_installation_url\":\"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"},{\"id\":282795,\"created_at\":\"2025-08-08 14:41:46\",\"iccid\":\"873000000000017067\",\"lpa\":\"lpa.airalo.com\",\"imsis\":null,\"matching_id\":\"TEST\",\"qrcode\":\"LPA:1$lpa.airalo.com$TEST\",\"qrcode_url\":\"https://sandbox.airalo.com/qr?expires=1840977706&id=323338&signature=05af46dc6718a6edc363482285c4c788dbcfd670f39beb50f801887e7ffe8bfa\",\"airalo_code\":null,\"apn_type\":\"manual\",\"apn_value\":\"airalo2\",\"is_roaming\":true,\"confirmation_code\":null,\"apn\":{\"ios\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"},\"android\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"}},\"msisdn\":null,\"direct_apple_installation_url\":\"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"},{\"id\":282796,\"created_at\":\"2025-08-08 14:41:46\",\"iccid\":\"873000000000017068\",\"lpa\":\"lpa.airalo.com\",\"imsis\":null,\"matching_id\":\"TEST\",\"qrcode\":\"LPA:1$lpa.airalo.com$TEST\",\"qrcode_url\":\"https://sandbox.airalo.com/qr?expires=1840977706&id=323339&signature=34764c178dfbf9085d0e943d427ce82fbc2ce85169581ef11514331e8172e962\",\"airalo_code\":null,\"apn_type\":\"manual\",\"apn_value\":\"airalo2\",\"is_roaming\":true,\"confirmation_code\":null,\"apn\":{\"ios\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"},\"android\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"}},\"msisdn\":null,\"direct_apple_installation_url\":\"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"},{\"id\":282797,\"created_at\":\"2025-08-08 14:41:46\",\"iccid\":\"873000000000017069\",\"lpa\":\"lpa.airalo.com\",\"imsis\":null,\"matching_id\":\"TEST\",\"qrcode\":\"LPA:1$lpa.airalo.com$TEST\",\"qrcode_url\":\"https://sandbox.airalo.com/qr?expires=1840977706&id=323340&signature=d199f451619390c88b68446e8ac3193f20ccfbbc0a29e771e78edff8c2153c1a\",\"airalo_code\":null,\"apn_type\":\"manual\",\"apn_value\":\"airalo2\",\"is_roaming\":true,\"confirmation_code\":null,\"apn\":{\"ios\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"},\"android\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"}},\"msisdn\":null,\"direct_apple_installation_url\":\"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"},{\"id\":282798,\"created_at\":\"2025-08-08 14:41:46\",\"iccid\":\"873000000000017070\",\"lpa\":\"lpa.airalo.com\",\"imsis\":null,\"matching_id\":\"TEST\",\"qrcode\":\"LPA:1$lpa.airalo.com$TEST\",\"qrcode_url\":\"https://sandbox.airalo.com/qr?expires=1840977706&id=323341&signature=cb838df6d492d9e4f45a6aff06402f2b0b835e75a77cafc82fea02dacbf5bff1\",\"airalo_code\":null,\"apn_type\":\"manual\",\"apn_value\":\"airalo2\",\"is_roaming\":true,\"confirmation_code\":null,\"apn\":{\"ios\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"},\"android\":{\"apn_type\":\"manual\",\"apn_value\":\"airalo2\"}},\"msisdn\":null,\"direct_apple_installation_url\":\"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"}]",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "--- Meta ---",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "message: \"success\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "--- Raw Response ---",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "{\n  \"data\": {\n    \"id\": 198524,\n    \"code\": \"20250808-198524\",\n    \"currency\": \"USD\",\n    \"package_id\": \"merhaba-7days-1gb\",\n    \"quantity\": 6,\n    \"type\": \"sim\",\n    \"description\": null,\n    \"esim_type\": \"Prepaid\",\n    \"validity\": 7,\n    \"package\": \"Merhaba-1 GB - 7 Days\",\n    \"data\": \"1 GB\",\n    \"price\": 4.5,\n    \"created_at\": \"2025-08-08 14:41:46\",\n    \"manual_installation\": \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To manually activate the eSIM on your eSIM capable device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Manually enter the SM-DP+ Address and activation code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android) </li><li>Enable data roaming.</li></ol>\",\n    \"qrcode_installation\": \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To activate the eSIM by scanning the QR code on your eSIM capable device you need to print or display this QR code on another device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Scan QR code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android)</li><li>Enable data roaming.</li></ol>\",\n    \"installation_guides\": {\n      \"en\": \"https://www.airalo.com/help/getting-started-with-airalo\"\n    },\n    \"text\": null,\n    \"voice\": null,\n    \"net_price\": 3.6,\n    \"brand_settings_name\": null,\n    \"sims\": [\n      {\n        \"id\": 282793,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017065\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323336&signature=802d82fb01a5661bb9cebedc1e385e20c3c5333c6c8f39e735a9f1077c86f826\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282794,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017066\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323337&signature=2071df07fcf2de7e6f48802a046a42979d5191bc7304536753c0f7c0f5498d69\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282795,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017067\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323338&signature=05af46dc6718a6edc363482285c4c788dbcfd670f39beb50f801887e7ffe8bfa\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282796,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017068\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323339&signature=34764c178dfbf9085d0e943d427ce82fbc2ce85169581ef11514331e8172e962\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282797,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017069\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323340&signature=d199f451619390c88b68446e8ac3193f20ccfbbc0a29e771e78edff8c2153c1a\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      },\n      {\n        \"id\": 282798,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017070\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323341&signature=cb838df6d492d9e4f45a6aff06402f2b0b835e75a77cafc82fea02dacbf5bff1\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\"\n      }\n    ]\n  },\n  \"meta\": {\n    \"message\": \"success\"\n  }\n}",
+        "severity": "success"
+      },
+      {
+        "type": "cy:request",
+        "message": "GET https://sandbox-partners-api.airalo.com/v2/orders/198524?include=sims,user,status\nStatus: 200\nResponse body: {\n  \"data\": {\n    \"id\": 198524,\n    \"code\": \"20250808-198524\",\n    \"package_id\": \"merhaba-7days-1gb\",\n    \"currency\": \"USD\",\n    \"quantity\": 6,\n    \"type\": \"sim\",\n    \"description\": null,\n    \"esim_type\": \"Prepaid\",\n    \"validity\": 7,\n    \"package\": \"1 GB - 7 Days\",\n    \"data\": \"1 GB\",\n    \"price\": 4.5,\n    \"text\": null,\n    \"voice\": null,\n    \"net_price\": 3.6,\n    \"created_at\": \"2025-08-08 14:41:46\",\n    \"manual_installation\": \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To manually activate the eSIM on your eSIM capable device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Manually enter the SM-DP+ Address and activation code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android) </li><li>Enable data roaming.</li></ol>\",\n    \"qrcode_installation\": \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To activate the eSIM by scanning the QR code on your eSIM capable device you need to print or display this QR code on another device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Scan QR code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android)</li><li>Enable data roaming.</li></ol>\",\n    \"installation_guides\": {\n      \"en\": \"https://www.airalo.com/help/getting-started-with-airalo\"\n    },\n    \"status\": {\n      \"name\": \"Completed\",\n      \"slug\": \"completed\"\n    },\n    \"user\": {\n      \"id\": 1051,\n      \"name\": \"QA Test\",\n      \"email\": \"qa@airalo.com\",\n      \"mobile\": null,\n      \"address\": \"Address\",\n      \"state\": null,\n      \"city\": \"City\",\n      \"postal_code\": \"000000\",\n      \"country_id\": 1,\n      \"company\": null,\n      \"created_at\": \"2024-08-21 15:55:35\"\n    },\n    \"sims\": [\n      {\n        \"id\": 282793,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017065\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323336&signature=802d82fb01a5661bb9cebedc1e385e20c3c5333c6c8f39e735a9f1077c86f826\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n        \"voucher_code\": null\n      },\n      {\n        \"id\": 282794,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017066\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323337&signature=2071df07fcf2de7e6f48802a046a42979d5191bc7304536753c0f7c0f5498d69\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n        \"voucher_code\": null\n      },\n      {\n        \"id\": 282795,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017067\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323338&signature=05af46dc6718a6edc363482285c4c788dbcfd670f39beb50f801887e7ffe8bfa\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n        \"voucher_code\": null\n      },\n      {\n        \"id\": 282796,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017068\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323339&signature=34764c178dfbf9085d0e943d427ce82fbc2ce85169581ef11514331e8172e962\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n        \"voucher_code\": null\n      },\n      {\n        \"id\": 282797,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017069\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323340&signature=d199f451619390c88b68446e8ac3193f20ccfbbc0a29e771e78edff8c2153c1a\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n        \"voucher_code\": null\n      },\n      {\n        \"id\": 282798,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017070\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323341&signature=cb838df6d492d9e4f45a6aff06402f2b0b835e75a77cafc82fea02dacbf5bff1\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n        \"voucher_code\": null\n      }\n    ]\n  },\n  \"meta\": {\n    \"message\": \"success\"\n  }\n}",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (data, meta) }** to have property **data**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (data, meta) }** to have property **meta**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **merhaba-7days-1gb** to equal **merhaba-7days-1gb**\nActual: \t\"merhaba-7days-1gb\"\nExpected: \t\"merhaba-7days-1gb\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **6** to equal **6**\nActual: \t6\nExpected: \t6",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ message: success }** to have property **message**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ message: success }** to have property **message** of **success**\nActual: \t\"success\"\nExpected: \t\"success\"",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **id**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **created_at**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **code**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **description**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **type**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **package_id**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **quantity**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **package**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **esim_type**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **validity**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **price**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **data**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **currency**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **manual_installation**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **qrcode_installation**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **installation_guides**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **sims**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **user**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:command",
+        "message": "assert\texpected **{ Object (id, code, ...) }** to have property **status**",
+        "severity": "success"
+      },
+      {
+        "type": "cy:log",
+        "message": "GET Response: {\n  \"data\": {\n    \"id\": 198524,\n    \"code\": \"20250808-198524\",\n    \"package_id\": \"merhaba-7days-1gb\",\n    \"currency\": \"USD\",\n    \"quantity\": 6,\n    \"type\": \"sim\",\n    \"description\": null,\n    \"esim_type\": \"Prepaid\",\n    \"validity\": 7,\n    \"package\": \"1 GB - 7 Days\",\n    \"data\": \"1 GB\",\n    \"price\": 4.5,\n    \"text\": null,\n    \"voice\": null,\n    \"net_price\": 3.6,\n    \"created_at\": \"2025-08-08 14:41:46\",\n    \"manual_installation\": \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To manually activate the eSIM on your eSIM capable device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Manually enter the SM-DP+ Address and activation code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android) </li><li>Enable data roaming.</li></ol>\",\n    \"qrcode_installation\": \"<p><b>eSIM name:</b> Merhaba</p><p><b>Coverage: </b>Turkey</p><p><b>To activate the eSIM by scanning the QR code on your eSIM capable device you need to print or display this QR code on another device:</b></p><ol><li>Settings > Cellular/Mobile > Add Cellular/Mobile Plan.</li><li>Scan QR code.</li><li>Confirm eSIM plan details.</li><li>Label the eSIM.</li></ol><p><b>To access Data:</b></p><ol><li>Locate the APN settings in your settings menu.</li><li>Update the APN to \\\"airalo2\\\"(iOS)/Create a new APN as \\\"airalo2\\\" (Android)</li><li>Enable data roaming.</li></ol>\",\n    \"installation_guides\": {\n      \"en\": \"https://www.airalo.com/help/getting-started-with-airalo\"\n    },\n    \"status\": {\n      \"name\": \"Completed\",\n      \"slug\": \"completed\"\n    },\n    \"user\": {\n      \"id\": 1051,\n      \"name\": \"QA Test\",\n      \"email\": \"qa@airalo.com\",\n      \"mobile\": null,\n      \"address\": \"Address\",\n      \"state\": null,\n      \"city\": \"City\",\n      \"postal_code\": \"000000\",\n      \"country_id\": 1,\n      \"company\": null,\n      \"created_at\": \"2024-08-21 15:55:35\"\n    },\n    \"sims\": [\n      {\n        \"id\": 282793,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017065\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323336&signature=802d82fb01a5661bb9cebedc1e385e20c3c5333c6c8f39e735a9f1077c86f826\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n        \"voucher_code\": null\n      },\n      {\n        \"id\": 282794,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017066\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323337&signature=2071df07fcf2de7e6f48802a046a42979d5191bc7304536753c0f7c0f5498d69\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n        \"voucher_code\": null\n      },\n      {\n        \"id\": 282795,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017067\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323338&signature=05af46dc6718a6edc363482285c4c788dbcfd670f39beb50f801887e7ffe8bfa\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n        \"voucher_code\": null\n      },\n      {\n        \"id\": 282796,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017068\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323339&signature=34764c178dfbf9085d0e943d427ce82fbc2ce85169581ef11514331e8172e962\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n        \"voucher_code\": null\n      },\n      {\n        \"id\": 282797,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017069\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323340&signature=d199f451619390c88b68446e8ac3193f20ccfbbc0a29e771e78edff8c2153c1a\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n        \"voucher_code\": null\n      },\n      {\n        \"id\": 282798,\n        \"created_at\": \"2025-08-08 14:41:46\",\n        \"iccid\": \"873000000000017070\",\n        \"lpa\": \"lpa.airalo.com\",\n        \"imsis\": null,\n        \"matching_id\": \"TEST\",\n        \"qrcode\": \"LPA:1$lpa.airalo.com$TEST\",\n        \"qrcode_url\": \"https://sandbox.airalo.com/qr?expires=1840977706&id=323341&signature=cb838df6d492d9e4f45a6aff06402f2b0b835e75a77cafc82fea02dacbf5bff1\",\n        \"airalo_code\": null,\n        \"apn_type\": \"manual\",\n        \"apn_value\": \"airalo2\",\n        \"is_roaming\": true,\n        \"confirmation_code\": null,\n        \"apn\": {\n          \"ios\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          },\n          \"android\": {\n            \"apn_type\": \"manual\",\n            \"apn_value\": \"airalo2\"\n          }\n        },\n        \"msisdn\": null,\n        \"direct_apple_installation_url\": \"https://esimsetup.apple.com/esim_qrcode_provisioning?carddata=LPA:1$lpa.airalo.com$TEST\",\n        \"voucher_code\": null\n      }\n    ]\n  },\n  \"meta\": {\n    \"message\": \"success\"\n  }\n}",
+        "severity": "success"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+Coding Exercise Instructions
+Task 1: Automate API Requests and Verify Responses
+Overview:
+The following exercise is designed to evaluate your skills in API testing. You may use any tool or language you feel comfortable with. Please submit your solution in a GitHub repository.
+Objective: Automate requests to the Airalo Partner API and validate the responses.
+Instructions:
+1.	Explore the API:
+	Visit Airalo API Documentation to understand the available endpoints and their usage.
+	Note the endpoints you will be using in the exercise.
+2.	Authentication:
+	Obtain OAuth2 tokens to access the Airalo Partner API, using the provided credentials:
+	client_id: 7e29e2facf83359855f746fc490443e6
+	client_secret: e5NNajm6jNAzrWsKoAdr41WfDiMeS1l6IcGdhmbb
+3.	Endpoint 1:
+	Use this endpoint to POST an order for 6 "merhaba-7days-1gb" eSIMs.
+	Ensure you have a valid OAuth2 token before making the request.
+4.	Endpoint 2:
+	Use this endpoint to GET a list of eSIMs.
+	Ensure the list contains 6 eSIMs, and that all of them have the "merhaba-7days-1gb" package slug.
+	Ensure you have a valid OAuth2 token before making the request.
+5.	Create Automated Tests:
+	Write scripts using a language and framework of your choice to automate the sending of requests to these endpoints.
+6.	Verify Responses:
+	Assert the correctness of the responses, including:
+	Status Codes: Ensure each request receives the appropriate HTTP status code.
+	Response Body: Check the response body for the correct information, including order details and eSIM properties.
+
+7.	Expected Output:
+	A script that automates the process of sending requests and verifying responses, along with documentation.
+Submission Guidelines:
+1.	GitHub Repository:
+	Create a public GitHub repository for your solutions to both exercises.
+	Include all necessary files and dependencies to run the tests.
+2.	ReadMe File:
+	Provide a ReadMe file that includes:
+	Instructions on how to set up and run each test.
+	An overview of your approach to implementing each test case.
+3.	Deadline:
+	Submit the repository link at least 48 hours before your interview.
+4.	Timebox :
+	Please try to limit your time spent to no more than 2-3 hours
