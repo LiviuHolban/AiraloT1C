@@ -5,12 +5,9 @@
 
 // API Endpoints
 const ENDPOINTS = {
-  url_base: 'https://partners-doc.airalo.com',
   url_base_sandbox: 'https://sandbox-partners-api.airalo.com', 
   api_version: 'v2',
   orders: 'orders',
-  unique_ID: '994a7fbb-fbda-451d-a3bc-98028a8e676d',
-  hashed_unique_ID: '#994a7fbb-fbda-451d-a3bc-98028a8e676d',
   // Replace with the actual endpoint if different
 
 };
@@ -41,7 +38,7 @@ describe('Verify the inserted order for 6 "merhaba-7days-1gb" eSIMs', () => {
         expect(orderResponse.body).to.have.property('data');
         const data = orderResponse.body.data;
         // Validate using the fixture template
-      cy.fixture('order_template.json').then((template) => {
+      cy.fixture('post_order_response_T.json').then((template) => {
         // Only compare keys that exist in the template for flexibility
         Object.keys(template.data).forEach((key) => {
           expect(data).to.have.property(key);
@@ -88,7 +85,7 @@ describe('Verify the inserted order for 6 "merhaba-7days-1gb" eSIMs', () => {
           // Check meta message
           expect(getResponse.body).to.have.property('data');
           expect(getResponse.body).to.have.property('meta');
-          cy.fixture('get_order_template.json').then((getTemplate) => {
+          cy.fixture('get_order_response_T.json').then((getTemplate) => {
             // Check top-level keys
             expect(getResponse.body.meta).to.have.property('message', getTemplate.meta.message);
             // Check data keys present in template

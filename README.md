@@ -10,7 +10,7 @@ This project provides an automated solution for the coding exercise described in
 1. **Order Creation Test**
    - Automates a POST request to create an order for 6 "merhaba-7days-1gb" eSIMs and verifies the response.
 2. **Order Verification after Creation Test**
-   - Automates a GET request to retrieve an order for 6 "merhaba-7days-1gb" eSIMs after the POST is made to create the order for all the 6 "merhaba-7days-1gb" eSIMs package.
+   - Automates a GET request to retrieve all eSIMs list and validate in that list only those 6 "merhaba-7days-1gb" eSIMs received in the POST made to create the order for all the 6 "merhaba-7days-1gb" eSIMs package.
 
 ## Prerequisites
 

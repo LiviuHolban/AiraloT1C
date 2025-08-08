@@ -6,17 +6,18 @@
 
 // API Endpoints
 const ENDPOINTS = {
-  url_base: 'https://partners-doc.airalo.com',
   url_base_sandbox: 'https://sandbox-partners-api.airalo.com', 
   api_version: 'v2',
   orders: 'orders',
-  unique_ID: '768fbbc7-b649-4fb5-9755-be579333a2d9',
-  hashed_unique_ID: '#768fbbc7-b649-4fb5-9755-be579333a2d9',
   // Replace with the actual endpoint if different
 
 };
 
 const URL_USED = `${ENDPOINTS.url_base_sandbox}/${ENDPOINTS.api_version}/${ENDPOINTS.orders}`;
+
+// Global test variables
+const TEST_PACKAGE_ID = 'merhaba-7days-1gb';
+const TEST_QUANTITY = 6;
 
 describe('Order 6 "merhaba-7days-1gb" eSIMs from Airalo API', () => {
   it('POST an order for 6 eSIMs', () => {
@@ -30,8 +31,8 @@ describe('Order 6 "merhaba-7days-1gb" eSIMs from Airalo API', () => {
           'Content-Type': 'application/json'
         },
         body: {
-          package_id: 'merhaba-7days-1gb',
-          quantity: 6
+          package_id: TEST_PACKAGE_ID,
+          quantity: TEST_QUANTITY
         }
       });
     }).then((response) => {
@@ -39,7 +40,7 @@ describe('Order 6 "merhaba-7days-1gb" eSIMs from Airalo API', () => {
       expect(response.body).to.have.property('data');
       const data = response.body.data;
       // Validate using the fixture template
-      cy.fixture('order_template.json').then((template) => {
+      cy.fixture('post_order_response_T.json').then((template) => {
         // Only compare keys that exist in the template for flexibility
         Object.keys(template.data).forEach((key) => {
           expect(data).to.have.property(key);
